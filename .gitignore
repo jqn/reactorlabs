@@ -7,7 +7,7 @@ myvenv
 __pycache__
 media
 staticfiles
-migrations
+#migrations
 
 # Backup files # 
 *.bak 
