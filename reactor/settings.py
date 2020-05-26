@@ -31,6 +31,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
+WHITENOISE_MIMETYPES = {
+    '.css': 'text/css'
+}
+
 
 # Application definition
 
