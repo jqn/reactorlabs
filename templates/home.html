@@ -52,7 +52,7 @@
       </div><!-- /.blog-post -->
       {% for post in object_list %}
       <div class="blog-post">
-        <h2 class="blog-post-title">{{ post.title }}</h2>
+        <h2 class="blog-post-title"><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
         <p class="blog-post-meta">December 23, 2013 by <a href="#">jQN</a></p>
 
         <p>{{ post.body }}</p>
