@@ -31,10 +31,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-# WHITENOISE_MIMETYPES = {
-#     '.css': 'text/css'
-# }
-
 
 # Application definition
 
@@ -45,11 +41,14 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users.apps.UsersConfig',
     'blog.apps.BlogConfig',
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
+    'dashboard.apps.DashboardConfig',
     'whitenoise.runserver_nostatic',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -143,3 +142,5 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 LOGIN_REDIRECT_URL = 'home'
+
+AUTH_USER_MODEL = 'users.CustomUser'
