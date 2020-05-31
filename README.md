@@ -15,3 +15,5 @@ https://github.com/twbs/bootstrap/tree/master/site/content/docs/5.0/examples/das
 **Tutorials**
 
 https://github.com/wsvincent/djangoforbeginners
+
+https://realpython.com/get-started-with-django-1/
