@@ -102,6 +102,10 @@ h6 {
   color: #727272;
 }
 
+.blog-post-title a {
+  color: #212529;
+}
+
 /*
  * Footer
  */
