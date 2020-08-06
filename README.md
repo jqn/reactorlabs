@@ -41,7 +41,17 @@ export RDS_PORT='3306'
 
 Create a new database with mysql-cli or application of your choice and name it `reactorlabs`
 
+5. Run your server and test things out
+
+```
+$ python manage.py runserver
+```
+
 ### Resources
+
+**Content**
+
+- [Ipsum generator list](https://www.shopify.com/partners/blog/79940998-15-funny-lorem-ipsum-generators-to-shake-up-your-design-mockups)
 
 **Templates**
 
@@ -55,6 +65,17 @@ https://github.com/twbs/bootstrap/tree/master/site/content/docs/5.0/examples/das
 
 **Tutorials**
 
-https://github.com/wsvincent/djangoforbeginners
+- [Setup VS Code for Django](https://automationpanda.com/2018/02/08/django-projects-in-visual-studio-code/)
 
-https://realpython.com/get-started-with-django-1/
+- [Real Python - Getting Started With Django](https://realpython.com/
+  get-started-with-django-1/)
+
+- [Categories and list views](https://www.agiliq.com/blog/2017/12/when-and-how-use-django-listview/)
+
+**Repos**
+
+- [djangoforbeginners](https://github.com/wsvincent/djangoforbeginners)
+
+- [djangoforprofessionals](https://github.com/wsvincent/djangoforprofessionals)
+
+[Real Python - Personal Portfolio](https://github.com/realpython/materials/tree/4dd5d79634efbffeb8999052a9e94b3dba4b25ba/rp-portfolio)
