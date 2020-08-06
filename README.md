@@ -78,4 +78,4 @@ https://github.com/twbs/bootstrap/tree/master/site/content/docs/5.0/examples/das
 
 - [djangoforprofessionals](https://github.com/wsvincent/djangoforprofessionals)
 
-[Real Python - Personal Portfolio](https://github.com/realpython/materials/tree/4dd5d79634efbffeb8999052a9e94b3dba4b25ba/rp-portfolio)
+- [Real Python - Personal Portfolio](https://github.com/realpython/materials/tree/4dd5d79634efbffeb8999052a9e94b3dba4b25ba/rp-portfolio)
