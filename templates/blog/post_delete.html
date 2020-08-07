@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+{% include "blog/top_nav.html" %}
+<div class="container">
+    <h1>Delete Post</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to delete "{{ post.title }}"?</p>
+        <input type="submit" value="Confirm" />
+    </form>
+</div>
+{% include "footer.html" %}
+{% endblock content %}

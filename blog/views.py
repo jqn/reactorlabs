@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 
 from .models import Post, Category
 
@@ -8,12 +9,41 @@ from .models import Post, Category
 
 class BlogListView(ListView):
     model = Post
+    paginate_by = 100
     template_name = 'blog/posts.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['headline'] = Post.objects.filter(
+            headline=True, draft=False).last()
+        context['featured'] = Post.objects.filter(
+            featured=True, draft=False).order_by('-last_modified')[0:2]
+        context['posts'] = Post.objects.filter(
+            featured=False, draft=False)
+        return context
 
 
 class BlogDetailView(DetailView):
     model = Post
     template_name = 'blog/post_detail.html'
+
+
+class BlogCreateView(CreateView):
+    model = Post
+    template_name = 'blog/post_new.html'
+    fields = ['title', 'author', 'body', 'categories']
+
+
+class BlogUpdateView(UpdateView):
+    model = Post
+    template_name = 'blog/post_edit.html'
+    fields = ['title', 'body']
+
+
+class BlogDeleteView(DeleteView):
+    model = Post
+    template_name = 'blog/post_delete.html'
+    success_url = reverse_lazy('posts')
 
 
 class BlogCategoryView(ListView):
