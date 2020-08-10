@@ -12,7 +12,8 @@
       "shtml",
       "xml",
       "svg",
-      "dust"
+      "dust",
+      "django-html"
     ],
     "brace_style": "collapse",
     "end_with_newline": true,
@@ -48,5 +49,26 @@
       "h6"
     ],
     "wrap_line_length": 0
+  },
+  "beautify.language": {
+    "js": {
+      "type": [
+        "javascript",
+        "json"
+      ],
+      "filename": [
+        ".jshintrc",
+        ".jsbeautifyrc"
+      ]
+    },
+    "css": [
+      "css",
+      "scss"
+    ],
+    "html": [
+      "htm",
+      "html",
+      "django-html"
+    ]
   }
 }

@@ -1,11 +1,11 @@
-from django.shortcuts import  get_object_or_404
+from django.shortcuts import get_object_or_404
 from django.views.generic import (
-    ListView, 
-    DetailView, 
-    CreateView, 
-    UpdateView, 
+    ListView,
+    DetailView,
+    CreateView,
+    UpdateView,
     DeleteView
-    )
+)
 from django.urls import reverse_lazy
 
 from .models import Post, Category
@@ -24,8 +24,11 @@ class BlogListView(ListView):
             headline=True, draft=False).last()
         context['featured'] = Post.objects.filter(
             featured=True, draft=False).order_by('-last_modified')[0:2]
+        context['firehose'] = Post.objects.filter(
+            firehose=True, draft=False).last()
         context['posts'] = Post.objects.filter(
             featured=False, draft=False)
+        context['categories'] = Category.objects.all()
         return context
 
 
