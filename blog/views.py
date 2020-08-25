@@ -29,6 +29,8 @@ class BlogListView(ListView):
         context['posts'] = Post.objects.filter(
             featured=False, draft=False)
         context['categories'] = Category.objects.all()
+        context['archives'] = Post.objects.dates(
+            'last_modified', 'month', order='DESC')
         return context
 
 
