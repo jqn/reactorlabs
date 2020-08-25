@@ -90,7 +90,7 @@
               <h4 class="font-italic">Archives</h4>
               <ol class="list-unstyled mb-0">
                 {% for date in archives%}
-                <li><a href="#">{{ date |date:"F Y" }}</a></li>
+                <li><a href="{% url 'post_archive' date|date:'Y'  date|date:'m' %}">{{ date | date:"F Y" }}</a></li>
                 {% endfor %}
               </ol>
             </div>

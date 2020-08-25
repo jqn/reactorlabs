@@ -4,18 +4,19 @@ from django.views.generic import (
     DetailView,
     CreateView,
     UpdateView,
-    DeleteView
+    DeleteView,
+    MonthArchiveView
 )
 from django.urls import reverse_lazy
-
 from .models import Post, Category
+import datetime
 
 # Create your views here.
 
 
 class BlogListView(ListView):
     model = Post
-    paginate_by = 100
+    # paginate_by = 100
     template_name = 'blog/posts.html'
 
     def get_context_data(self, **kwargs):
@@ -73,3 +74,30 @@ class BlogCategoryView(ListView):
         # Add in the category
         context['category'] = self.category
         return context
+
+
+class ArticleMonthArchiveView(MonthArchiveView):
+    queryset = Post.objects.all()
+    date_field = "last_modified"
+    # allow_future = True
+    allow_empty = True
+
+# class BlogArchiveView(ListView):
+#     # paginate_by = 100
+#     template_name = 'blog/post_archive.html'
+#     context_object_name = 'archives'
+#     ordering = ['-last_modified']
+
+#     def get_queryset(self, *args, **kwargs):
+#         print(get_object_or_404(
+#             Post, last_modified=self.kwargs['archive']))
+#         self.archive = get_object_or_404(
+#             Post, last_modified=self.kwargs['archive'])
+#         return Post.objects.filter(last_modified=self.kwargs['archive'])
+
+#     def get_context_data(self, **kwargs):
+#         # Call the base implementation first to get a context
+#         context = super().get_context_data(**kwargs)
+#         # Add in the category
+#         context['archive'] = self.archive
+#         return context
