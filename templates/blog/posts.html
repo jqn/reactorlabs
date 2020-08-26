@@ -48,8 +48,8 @@
             <div class="blog-post">
               {% if firehose %}
               <h2 class="blog-post-title">{{firehose.title}}</h2>
-              <p class="blog-post-meta">{{firehose.last_modified|date:"F d, Y"}} <a href="#">{{ firehose.author }}</a></p>
-              <p>{{ firehose.body|truncatechars_html:400 }}</p>
+              <p class="blog-post-meta">{{firehose.last_modified|date:"F d, Y"}} by <a href="#">{{ firehose.author }}</a></p>
+              <p class="content-markdown">{{ firehose.body|truncatechars_html:2500 }}</p>
               {% for category in firehose.categories.all %}
               <a href="{% url 'post_category' category.name %}">
               {{ category.name | capfirst }}
@@ -62,7 +62,7 @@
             <div class="blog-post">
               <h2 class="blog-post-title"><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
               <p class="blog-post-meta">{{post.last_modified|date:"F d, Y"}} by <a href="#">{{post.author}}</a></p>
-              <p>{{ post.body|truncatechars_html:200 }}</p>
+              <p class="content-markdown">{{ post.body|truncatechars_html:200 }}</p>
               {% for category in post.categories.all %}
               <a href="{% url 'post_category' category.name %}">
               {{ category.name | capfirst }}
