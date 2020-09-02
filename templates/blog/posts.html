@@ -8,8 +8,7 @@
   <div class="col-md-6 px-0">
     <h1 class="display-4 font-italic">{{headline.title}}</h1>
     <p class="lead my-3">{{headline.body|truncatechars_html:160}}</p>
-    <p class="lead mb-0"><a href="{% url 'post_detail' headline.pk %}" class="text-white font-weight-bold">Continue
-          reading...</a></p>
+    <p class="lead mb-0"><a href="{% url 'post_detail' headline.pk %}" class="text-white font-weight-bold">Continue reading...</a></p>
   </div>
 </div>
 {% endif %}
@@ -69,11 +68,6 @@
         </div>
         {% endfor %}
         <!-- /.blog-post -->
-
-        <nav class="blog-pagination">
-          <a class="btn btn-outline-primary" href="#">Older</a>
-          <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
-        </nav>
 
       </div>
       <!-- /.blog-main -->
