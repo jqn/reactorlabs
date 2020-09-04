@@ -1,14 +1,15 @@
-{% extends 'base.html' %}
+{% extends 'blog/base.html' %}
 {% block content %}
 <div class="container">
   {% include "blog/top_nav.html" %}
-  <div class="post-entry">
-    <h2>{{ object.title }}</h2>
-    <p>{{ object.body }}</p>
+  <div class="post-entry pt-5">
+    <h2 class="blog-post-title">{{ object.title }}</h2>
+    <p class="blog-post-meta">{{object.last_modified|date:"F d, Y"}} by <a href="#">{{object.author}}</a></p>
+    <p class="mb-auto">{{ object.body }}</p>
   </div>
-
-  <a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a>
+  {% if user.is_authenticated %}
+  <p><a href="{% url 'post_edit' post.pk %}">+ Edit Blog Post</a></p>
   <p><a href="{% url 'post_delete' post.pk %}">+ Delete Blog Post</a></p>
+  {% endif %}
 </div>
-{% include "footer.html" %}
 {% endblock content %}

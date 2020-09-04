@@ -59,9 +59,13 @@ https://getbootstrap.com/docs/4.0/examples/blog/
 
 https://github.com/twbs/bootstrap/blob/master/site/content/docs/5.0/examples/blog/index.html
 
+https://github.com/twbs/bootstrap/blob/main/site/content/docs/5.0/examples/cover/index.html
+
 https://getbootstrap.com/docs/4.0/examples/dashboard/
 
 https://github.com/twbs/bootstrap/tree/master/site/content/docs/5.0/examples/dashboard
+
+https://github.com/rhazdon/hugo-theme-hello-friend-ng
 
 **Tutorials**
 

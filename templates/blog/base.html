@@ -1,6 +1,6 @@
 <!-- templates/base.html -->
 {% load static %}
-<html lang="en" class="h-100">
+<html lang="en">
 
 <head>
   <!-- Required meta tags -->
@@ -9,18 +9,30 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900&display=swap" rel="stylesheet" />
-  <link href="{% static 'css/pages.css' %}" rel="stylesheet" />
+  <link href="{% static 'css/blog.css' %}" rel="stylesheet" />
   <title>Reactor Labs</title>
 </head>
 
-<body class="d-flex h-100 text-center text-white bkg-dark">
+<body>
   {% block content %}
   {% endblock content %}
+  {% include "blog/footer.html" %}
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/0.1.2/marked.min.js" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  $(document).ready(function() {
+    $(".content-markdown").each(function() {
+      var content = $(this).text();
+      var markedContent = marked(content);
+      $(this).html(markedContent);
+    });
+  });
+
+  </script>
 </body>
 
 </html>

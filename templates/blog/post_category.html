@@ -1,20 +1,20 @@
-{% extends "base.html" %}
+{% extends "blog/base.html" %}
 {% block content %}
 <div class="col-md-8 offset-md-2">
-    <h1>{{ category | title }}</h1>
-    <hr>
-    {% for post in posts %}
-        <h2><a href="{% url 'post_detail' post.pk%}">{{ post.title }}</a></h2>
-        <small>
-            {{ post.created_on.date }} |&nbsp;
-            Categories:&nbsp;
-            {% for category in post.categories.all %}
-            <a href="{% url 'post_category' category.name %}">
-                {{ category.name | capfirst }}
-            </a>&nbsp;
-            {% endfor %}
-        </small>
-        <p>{{ post.body | slice:":400" }}...</p>
-    {% endfor %}
+  <h1><a class="text-dark" href="{% url 'posts' %}">{{ category | title }}</a></h1>
+  <hr>
+  {% for post in posts %}
+  <h2 class="blog-post-title">{{ post.title }}</a></h2>
+  <small>
+  {{ post.last_modified|date:"F d, Y" }} by {{post.author}} |&nbsp;
+  Categories:&nbsp;
+  {% for category in post.categories.all %}
+  <a href="{% url 'post_category' category.name %}">
+  {{ category.name | capfirst }}
+  </a>&nbsp;
+  {% endfor %}
+  </small>
+  <p>{{ post.body | slice:":400" }}...</p>
+  {% endfor %}
 </div>
 {% endblock content %}

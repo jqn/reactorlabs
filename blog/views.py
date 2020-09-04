@@ -9,9 +9,26 @@ from django.views.generic import (
 )
 from django.urls import reverse_lazy
 from .models import Post, Category
-import datetime
-
+from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
+
+
+class BlogCreateView(LoginRequiredMixin, CreateView):
+    model = Post
+    template_name = 'blog/post_new.html'
+    fields = ['title', 'author', 'body', 'categories']
+
+
+class BlogUpdateView(LoginRequiredMixin, UpdateView):
+    model = Post
+    template_name = 'blog/post_edit.html'
+    fields = ['title', 'body']
+
+
+class BlogDeleteView(LoginRequiredMixin, DeleteView):
+    model = Post
+    template_name = 'blog/post_delete.html'
+    success_url = reverse_lazy('posts')
 
 
 class BlogListView(ListView):
@@ -40,24 +57,6 @@ class BlogDetailView(DetailView):
     template_name = 'blog/post_detail.html'
 
 
-class BlogCreateView(CreateView):
-    model = Post
-    template_name = 'blog/post_new.html'
-    fields = ['title', 'author', 'body', 'categories']
-
-
-class BlogUpdateView(UpdateView):
-    model = Post
-    template_name = 'blog/post_edit.html'
-    fields = ['title', 'body']
-
-
-class BlogDeleteView(DeleteView):
-    model = Post
-    template_name = 'blog/post_delete.html'
-    success_url = reverse_lazy('posts')
-
-
 class BlogCategoryView(ListView):
     template_name = 'blog/post_category.html'
     context_object_name = 'posts'
@@ -79,25 +78,4 @@ class BlogCategoryView(ListView):
 class ArticleMonthArchiveView(MonthArchiveView):
     queryset = Post.objects.all()
     date_field = "last_modified"
-    # allow_future = True
     allow_empty = True
-
-# class BlogArchiveView(ListView):
-#     # paginate_by = 100
-#     template_name = 'blog/post_archive.html'
-#     context_object_name = 'archives'
-#     ordering = ['-last_modified']
-
-#     def get_queryset(self, *args, **kwargs):
-#         print(get_object_or_404(
-#             Post, last_modified=self.kwargs['archive']))
-#         self.archive = get_object_or_404(
-#             Post, last_modified=self.kwargs['archive'])
-#         return Post.objects.filter(last_modified=self.kwargs['archive'])
-
-#     def get_context_data(self, **kwargs):
-#         # Call the base implementation first to get a context
-#         context = super().get_context_data(**kwargs)
-#         # Add in the category
-#         context['archive'] = self.archive
-#         return context
