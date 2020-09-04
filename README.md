@@ -2,7 +2,7 @@
 
 Djangofied Bootstrap Template
 
-![featured-image](https://raw.githubusercontent.com/jqn/reactorlabs/static/images/djangofy-blog.png)
+![featured-image](https://raw.githubusercontent.com/jqn/reactorlabs/master/static/images/djangofy-blog.png)
 
 ## Getting Started
 
