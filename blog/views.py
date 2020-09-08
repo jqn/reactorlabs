@@ -45,7 +45,7 @@ class BlogListView(ListView):
         context['firehose'] = Post.objects.filter(
             firehose=True, draft=False).last()
         context['posts'] = Post.objects.filter(
-            featured=False, draft=False)
+            headline=False, featured=False, firehose=False, draft=False)
         context['categories'] = Category.objects.all()
         context['archives'] = Post.objects.dates(
             'last_modified', 'month', order='DESC')
