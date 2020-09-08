@@ -1,1 +1,0 @@
-web: gunicorn reactor.wsgi --log-file -
