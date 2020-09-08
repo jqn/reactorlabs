@@ -89,3 +89,5 @@ https://github.com/rhazdon/hugo-theme-hello-friend-ng
 - [Real Python - Personal Portfolio](https://github.com/realpython/materials/tree/4dd5d79634efbffeb8999052a9e94b3dba4b25ba/rp-portfolio)
 
 - [Coding For Entrepreneurs](https://github.com/codingforentrepreneurs)
+
+- [Marked](https://github.com/markedjs/marked/blob/master/docs/demo/quickref.md)
