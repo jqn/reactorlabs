@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'reactor.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
+        'HOST': os.getenv('DB_HOSTNAME'),
         'NAME': os.getenv('DB_NAME'),
         'USER': os.getenv('DB_USERNAME'),
         'PASSWORD': os.getenv('DB_PASSWORD'),
-        'HOST': os.getenv('DB_HOSTNAME'),
         'PORT': os.getenv('DB_PORT'),
     }
 }

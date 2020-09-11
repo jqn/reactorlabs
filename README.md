@@ -34,11 +34,11 @@ $ vi ~/.virtualenvs/reactorlabs/bin/postactivate`
 ```
 #!/bin/bash
 # This hook is sourced after this virtualenv is activated.
-export RDS_HOSTNAME='localhost'
-export RDS_DB_NAME='reactorlabs'
-export RDS_USERNAME='dbuser'
-export RDS_PASSWORD='dbpass'
-export RDS_PORT='3306'
+export DB_HOSTNAME='localhost'
+export DB_NAME='reactorlabs'
+export DB_USERNAME='dbuser'
+export DB_PASSWORD='dbpass'
+export DB_PORT='3306'
 ```
 
 4. Set up your Database
