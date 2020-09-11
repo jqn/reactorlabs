@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
     'dashboard.apps.DashboardConfig',
+    'pagedown.apps.PagedownConfig'
 ]
 
 
