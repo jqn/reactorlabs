@@ -3,6 +3,8 @@ from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.urls import reverse
+from markdown_deux import markdown
+from django.utils.safestring import mark_safe
 # Create your models here.
 
 
@@ -30,3 +32,7 @@ class Post(models.Model):
 
     def get_absolute_url(self):
         return reverse('post_detail', args=[str(self.id)])
+
+    def get_markdown(self):
+        body = self.body
+        return mark_safe(markdown(body))

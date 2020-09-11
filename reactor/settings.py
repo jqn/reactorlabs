@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
     'dashboard.apps.DashboardConfig',
-    'pagedown.apps.PagedownConfig'
+    'pagedown.apps.PagedownConfig',
+    'markdown_deux',
 ]
 
 
