@@ -7,6 +7,8 @@ from .models import CustomUser
 
 class CustomUserCreationForm(UserCreationForm):
 
+    editor = forms.BooleanField(required=False)
+
     class Meta(UserCreationForm.Meta):
         model = CustomUser
         fields = ('username', 'email', 'editor',)

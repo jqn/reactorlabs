@@ -47,8 +47,10 @@ INSTALLED_APPS = [
     'dashboard.apps.DashboardConfig',
     'pagedown.apps.PagedownConfig',
     'markdown_deux',
+    'crispy_forms',
 ]
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

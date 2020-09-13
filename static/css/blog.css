@@ -124,3 +124,10 @@ h6 {
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+#div_id_body .wmd-panel {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  min-width: 500px;
+}

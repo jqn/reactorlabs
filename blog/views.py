@@ -9,14 +9,15 @@ from django.views.generic import (
 )
 from django.urls import reverse_lazy
 from .models import Post, Category
+from .forms import PostCreateForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 # Create your views here.
 
 
 class BlogCreateView(LoginRequiredMixin, CreateView):
     model = Post
+    form_class = PostCreateForm
     template_name = 'blog/post_new.html'
-    fields = ['title', 'author', 'body', 'categories']
 
 
 class BlogUpdateView(LoginRequiredMixin, UpdateView):

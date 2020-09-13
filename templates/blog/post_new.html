@@ -1,13 +1,22 @@
-{% extends 'bblog/base.html' %}
+{% extends 'blog/base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block head_extra %}
+{{ form.media }}
+{% endblock head_extra %}
+
 {% block content %}
+
 {% include "blog/top_nav.html" %}
+
 <div class="container">
   <h1>New Post</h1>
   <form action="" method="post">
     {% csrf_token %}
-    {{form.as_p}}
+    {{form | crispy}}
     <input type="submit" value="Save" />
   </form>
 </div>
-{% include "footer.html" %}
+
 {% endblock content %}

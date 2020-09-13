@@ -1,10 +1,16 @@
 <!-- templates/signup.html -->
 {% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
 {% block content %}
-<h2>Sign up</h2>
-<form method="post">
-  {% csrf_token %}
-  {{ form.as_p }}
-  <button type="submit">Sign up</button>
-</form>
+<div class="container">
+  {% include "header.html" %}
+  <h2>Sign up</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form | crispy }}
+    <button type="submit">Sign up</button>
+  </form>
+</div>
 {% endblock content %}
