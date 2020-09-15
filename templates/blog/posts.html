@@ -47,7 +47,7 @@
             {% if firehose %}
             <h2 class="blog-post-title">{{firehose.title}}</h2>
             <p class="blog-post-meta">{{firehose.last_modified|date:"F d, Y"}} by <a href="#">{{ firehose.author }}</a></p>
-            <p class="content-markdown">{{ firehose.body|truncatechars_html:2500 }}</p>
+            <p class="content-markdown">{{ firehose.get_markdown|truncatechars_html:2500 }}</p>
             {% for category in firehose.categories.all %}
             <a href="{% url 'post_category' category.name %}">
             {{ category.name | capfirst }}
