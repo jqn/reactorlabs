@@ -7,12 +7,10 @@
 {% endblock head_extra %}
 
 {% block content %}
-<div class="container">
-  <div class='content-preview'>
-    <h3 id='preview-title'></h3>
-    <p id='preview-content'></p>
-  </div>
-  {% include "blog/top_nav.html" %}
+
+{% include "blog/top_nav.html" %}
+
+<div class="container content-container">
   <h1>Edit Post</h1>
   <form action="" method="post">
     {% csrf_token %}

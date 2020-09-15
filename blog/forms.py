@@ -8,4 +8,5 @@ class PostCreateForm(forms.ModelForm):
 
     class Meta:
         model = Post
-        fields = ['title', 'author', 'body', 'categories']
+        fields = ['title', 'author', 'body',
+                  'categories', 'headline', 'featured', 'firehose', 'draft']
