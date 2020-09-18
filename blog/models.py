@@ -17,6 +17,7 @@ class Category(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=200)
+    cover = models.ImageField(upload_to='covers/', blank=True)
     body = models.TextField()
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     headline = models.BooleanField(default=False)

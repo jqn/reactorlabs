@@ -5,6 +5,9 @@
   <div class="post-entry pt-5 post-detail-item">
     <h2 class="blog-post-title">{{ object.title }}</h2>
     <p class="blog-post-meta">{{object.last_modified|date:"F d, Y"}} by <a href="#">{{object.author}}</a></p>
+    {% if object.cover %}
+    <img class="bookcover" src="{{ object.cover.url}}" alt="{{ object.title }}">
+    {% endif %}
     <p class="mb-auto content-markdown">{{ object.get_markdown }}</p>
   </div>
   {% if user.is_authenticated %}
