@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'pagedown.apps.PagedownConfig',
     'markdown_deux',
     'crispy_forms',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
