@@ -66,12 +66,6 @@ h6 {
   border-radius: 0 3px 3px 0;
 }
 
-.feature-thumb {
-  width: 200px;
-  height: 250px;
-  object-fit: cover;
-}
-
 .thumb-container {
   padding-right: 0;
   padding-left: 0;
@@ -136,9 +130,33 @@ h6 {
   margin-bottom: 0;
 }
 
+/*
+ * Markdown editor
+ */
 #div_id_body .wmd-panel {
   margin-left: 0;
   margin-right: 0;
   width: 100%;
   min-width: 500px;
+}
+
+/*
+ * Overrides
+ */
+.feature-thumb {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+}
+
+a {
+  color: #616161
+}
+
+a:hover {
+  color: #f57c00
+}
+
+.category-name {
+  color: #f57c00
 }
