@@ -33,10 +33,10 @@
       var markedContent = marked(content);
       $(this).html(markedContent);
     });
-    $(".post-detail-item img").each(function() {
+    $(".wmd-wrapper  #wmd-preview-id_body img").each(function() {
       $(this).addClass("img-fluid");
     });
-    $(".wmd-preview p img").each(function() {
+    $(".post-detail-item img").each(function() {
       $(this).addClass("img-fluid");
     });
     $('p:empty').remove();

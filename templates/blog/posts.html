@@ -2,7 +2,7 @@
 {% extends 'blog/base.html' %}
 {% block content %}
 <div>
-  <div class="container content-container">
+  <div class="container safe-area-container">
     {% include "blog/top_nav.html" %}
     {% include "blog/bottom_nav.html" %}
 
@@ -61,7 +61,7 @@
             <div class="blog-post">
               <h2 class="blog-post-title">{{firehose.title}}</h2>
               <p class="blog-post-meta">{{firehose.last_modified|date:"F d, Y"}} by <a href="#">{{ firehose.author }}</a></p>
-              <p class="content-markdown">{{ firehose.get_markdown|truncatechars_html:2500 }}</p>
+              <p class="content-markdown">{{ firehose.get_markdown|truncatechars_html:4000 }}</p>
               {% for category in firehose.categories.all %}
               <a href="{% url 'post_category' category.name %}">
               {{ category.name | capfirst }}
