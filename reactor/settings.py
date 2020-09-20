@@ -48,13 +48,13 @@ INSTALLED_APPS = [
     'pagedown.apps.PagedownConfig',
     'markdown_deux',
     'crispy_forms',
+    'storages'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -129,6 +129,15 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
+
+# AWS Media Storage
+AWS_ACCESS_KEY_ID = os.getenv('AWS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_KEY')
+AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_BUCKET')
+AWS_S3_REGION_NAME = os.getenv('AWS_REGION')
+
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 # Static files (CSS, JavaScript, Images)
