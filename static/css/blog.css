@@ -150,14 +150,14 @@ h6 {
 }
 
 a {
-  color: #616161
+  color: #454545
 }
 
 a:hover {
   color: #f57c00
 }
 
-.category-name {
+.category-name a {
   color: #f57c00
 }
 
