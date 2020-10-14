@@ -56,6 +56,11 @@ class BlogListView(ListView):
 class BlogDetailView(DetailView):
     model = Post
     template_name = 'blog/post_detail.html'
+    slug_field = 'slug'
+
+    # def get_object(self):
+    #     object = get_object_or_404(Post, title=self.kwargs['slug'])
+    #     return object
 
 
 class BlogCategoryView(ListView):
