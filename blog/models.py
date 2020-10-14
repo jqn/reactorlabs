@@ -5,6 +5,7 @@ from django.db import models
 from django.urls import reverse
 from markdown_deux import markdown
 from django.utils.safestring import mark_safe
+from django.utils import timezone
 # Create your models here.
 
 
@@ -24,6 +25,9 @@ class Post(models.Model):
     featured = models.BooleanField(default=False)
     firehose = models.BooleanField(default=False)
     draft = models.BooleanField(default=False)
+    slug = models.SlugField(
+        max_length=250, unique_for_date='publish')
+    publish = models.DateTimeField(default=timezone.now)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
     categories = models.ManyToManyField('Category', related_name='posts')
