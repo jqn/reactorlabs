@@ -4,7 +4,7 @@
   <h1><a class="text-dark" href="{% url 'posts' %}">{{ month|date:"F d, Y" }}</a></h1>
   <hr class="mb-5">
   {% for post in object_list %}
-  <h2 class="blog-post-title"><a href="{% url 'post_detail' post.pk %}" class="text-dark font-weight-bold">{{ post.title }}</a></h2>
+  <h2 class="blog-post-title"><a href="{{ post.get_absolute_url }}" class="text-dark font-weight-bold">{{ post.title }}</a></h2>
   <small>
   <p class="blog-post-meta">{{post.last_modified|date:"F d, Y"}} by <a href="#">{{post.author}}</a> |&nbsp;
     {% for category in post.categories.all %}

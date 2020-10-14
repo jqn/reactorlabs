@@ -34,7 +34,7 @@ class BlogDeleteView(LoginRequiredMixin, DeleteView):
 
 class BlogListView(ListView):
     model = Post
-    # paginate_by = 100
+    paginate_by = 4
     template_name = 'blog/posts.html'
 
     def get_context_data(self, **kwargs):
@@ -57,10 +57,6 @@ class BlogDetailView(DetailView):
     model = Post
     template_name = 'blog/post_detail.html'
     slug_field = 'slug'
-
-    # def get_object(self):
-    #     object = get_object_or_404(Post, title=self.kwargs['slug'])
-    #     return object
 
 
 class BlogCategoryView(ListView):

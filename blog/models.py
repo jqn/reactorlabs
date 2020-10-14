@@ -18,6 +18,8 @@ class Category(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=200)
+    slug = models.SlugField(
+        max_length=250, unique_for_date='publish')
     cover = models.ImageField(upload_to='covers/', blank=True)
     body = models.TextField()
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
@@ -25,8 +27,6 @@ class Post(models.Model):
     featured = models.BooleanField(default=False)
     firehose = models.BooleanField(default=False)
     draft = models.BooleanField(default=False)
-    slug = models.SlugField(
-        max_length=250, unique_for_date='publish')
     publish = models.DateTimeField(default=timezone.now)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
