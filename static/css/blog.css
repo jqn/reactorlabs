@@ -106,14 +106,34 @@ h6 {
   font-size: 2.5rem;
 }
 
+.blog-post-subtitle  {
+  color: #727272;
+}
+
 .blog-post-meta {
   margin-bottom: 1.25rem;
+  color: #727272;
+}
+
+.blog-posts-meta {
+  margin-bottom: 0;
   color: #727272;
 }
 
 .blog-post-title a {
   color: #212529;
 }
+
+.category-post-meta {
+  margin-bottom: 1.25rem;
+  color: #727272;
+}
+
+.archive-post-meta {
+  margin-bottom: 1.25rem;
+  color: #727272;
+}
+
 
 /*
  * Footer

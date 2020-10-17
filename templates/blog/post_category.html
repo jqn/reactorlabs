@@ -5,8 +5,9 @@
   <hr class="mb-5">
   {% for post in posts %}
   <h2 class="blog-post-title"><a href="{{ post.get_absolute_url }}"class="text-dark font-weight-bold">{{ post.title }}</a></h2>
+  <p class="blog-post-subtitle">{{ post.subtitle|truncatechars_html:200 }}</p>
   <small>
-   <p class="blog-post-meta">{{ post.last_modified|date:"F d, Y" }} by <a href="#">{{post.author}}</a> |&nbsp;
+   <p class="category-post-meta">{{ post.last_modified|date:"F d, Y" }} by <a href="#">{{post.author}}</a> |&nbsp;
   Categories:&nbsp;
   {% for category in post.categories.all %}
   <a href="{% url 'post_category' category.name %}">
@@ -14,7 +15,6 @@
   </a>&nbsp;
   {% endfor %}</p>
   </small>
-  <p>{{ post.get_markdown | truncatechars_html:400 }}</p>
   {% endfor %}
 </div>
 {% endblock content %}
