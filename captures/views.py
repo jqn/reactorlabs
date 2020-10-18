@@ -1,10 +1,9 @@
-from django.shortcuts import render
-
 # Create your views here.
 from rest_framework import authentication, generics, permissions
 
 from .models import EmailCapture
 from .serializers import EmailCaptureSerializer
+from django.views.generic import TemplateView
 
 # django corsheaders cfe.sh
 
@@ -21,3 +20,7 @@ class EmailCaptureCreateAPIView(generics.CreateAPIView):
         if not user.is_authenticated:
             user = None  # Annon User
         serializer.save(user=user)
+
+
+class CapturesPageView(TemplateView):
+    template_name = 'captures/captures.html'
