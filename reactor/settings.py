@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'dashboard.apps.DashboardConfig',
     'pagedown.apps.PagedownConfig',
+    'captures.apps.CapturesConfig',
     'markdown_deux',
     'crispy_forms',
     'storages'
