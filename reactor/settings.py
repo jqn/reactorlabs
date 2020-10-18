@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'captures.apps.CapturesConfig',
     'markdown_deux',
     'crispy_forms',
-    'storages'
+    'storages',
+    'rest_framework',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -155,3 +156,10 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'home'
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+# Disable the browseable API in production
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
+}

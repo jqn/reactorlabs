@@ -80,6 +80,8 @@ https://github.com/rhazdon/hugo-theme-hello-friend-ng
 
 - [Categories and list views](https://www.agiliq.com/blog/2017/12/when-and-how-use-django-listview/)
 
+- [Django REST with React](https://www.valentinog.com/blog/drf/)
+
 **Repos**
 
 - [djangoforbeginners](https://github.com/wsvincent/djangoforbeginners)
