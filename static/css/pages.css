@@ -6983,7 +6983,7 @@ button.bg-primary:focus {
 }
 
 .bg-secondary {
-  background-color: #2c3e50 !important;
+  background-color: #4a4a4a !important;
 }
 
 a.bg-secondary:hover,
@@ -11024,7 +11024,7 @@ a.text-dark:focus {
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
-  color: #1abc9c;
+  color: #ff5f00;
 }
 
 #mainNav .navbar-nav li.nav-item a.nav-link:active,
@@ -11085,16 +11085,18 @@ a.text-dark:focus {
 }
 
 .masthead .masthead-heading {
-  font-size: 2.75rem;
-  line-height: 2.75rem;
+  font-size: 3.8rem;
+  line-height: 3.5rem;
+  padding-bottom: 0.5em;
 }
 
 .masthead .masthead-subheading {
-  font-size: 1.25rem;
+  /* font-size: 1.25rem; */
 }
 
 .masthead .masthead-avatar {
   width: 15rem;
+  border-radius: 50%;
 }
 
 @media (min-width: 992px) {
@@ -11104,12 +11106,12 @@ a.text-dark:focus {
   }
 
   .masthead .masthead-heading {
-    font-size: 4rem;
+    font-size: 3.8rem;
     line-height: 3.5rem;
   }
 
   .masthead .masthead-subheading {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
   }
 }
 
