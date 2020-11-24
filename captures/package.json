@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development ./src/index.js --output-path ../static/js/",
-    "build": "webpack --mode production ./src/index.js --output-path ../../static/js/main.js",
+    "dev": "webpack --mode development ./src/index.js --output-path ../static/js",
+    "build": "webpack --mode production ./src/index.js --output-path ../static/js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'markdown_deux',
     'crispy_forms',
     'storages',
+    'rest_framework',
     'pagedown.apps.PagedownConfig',
     'dashboard.apps.DashboardConfig',
     'users.apps.UsersConfig',
@@ -50,7 +51,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
     'leads.apps.LeadsConfig',
-    'captures.apps.CapturesConfig'
+    'captures.apps.CapturesConfig',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -156,3 +157,9 @@ LOGIN_REDIRECT_URL = 'dashboard'
 LOGOUT_REDIRECT_URL = 'home'
 
 AUTH_USER_MODEL = 'users.CustomUser'
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_RENDERER_CLASSES': (
+#         'rest_framework.renderers.JSONRenderer',
+#     )
+# }
