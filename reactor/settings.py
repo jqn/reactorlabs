@@ -40,15 +40,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'markdown_deux',
+    'crispy_forms',
+    'storages',
+    'pagedown.apps.PagedownConfig',
+    'dashboard.apps.DashboardConfig',
     'users.apps.UsersConfig',
     'blog.apps.BlogConfig',
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
-    'dashboard.apps.DashboardConfig',
-    'pagedown.apps.PagedownConfig',
-    'markdown_deux',
-    'crispy_forms',
-    'storages'
+    'leads.apps.LeadConfig',
+    'captures.apps.CapturesConfig'
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
