@@ -49,7 +49,7 @@ INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'pages.apps.PagesConfig',
     'accounts.apps.AccountsConfig',
-    'leads.apps.LeadConfig',
+    'leads.apps.LeadsConfig',
     'captures.apps.CapturesConfig'
 ]
 
