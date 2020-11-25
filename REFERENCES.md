@@ -35,6 +35,10 @@ https://github.com/rhazdon/hugo-theme-hello-friend-ng
 
 - [React/Django integration](https://www.valentinog.com/blog/drf/)
 
+- [React with Webpack and Babel](https://www.valentinog.com/blog/babel/)
+
+- [How to React with Webpack 5](https://www.robinwieruch.de/minimal-react-webpack-babel-setup)
+
 **Repos**
 
 - [djangoforbeginners](https://github.com/wsvincent/djangoforbeginners)

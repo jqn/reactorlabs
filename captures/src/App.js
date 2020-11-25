@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch("api/lead")
+    fetch("http://127.0.0.1:8000/api/leads")
       .then((response) => {
         if (response.status > 400) {
           return this.setState(() => {
@@ -22,6 +22,7 @@ class App extends Component {
         return response.json();
       })
       .then((data) => {
+        console.log("🚀 ~ file: App.js ~ line 25 ~ App ~ .then ~ data", data);
         this.setState(() => {
           return {
             data,
@@ -32,7 +33,7 @@ class App extends Component {
   }
 
   render() {
-    return <p>Hello World!</p>;
+    return <p>Hello World React!</p>;
   }
 }
 
@@ -40,3 +41,5 @@ export default App;
 
 const container = document.getElementById("app");
 render(<App />, container);
+
+module.hot.accept();
