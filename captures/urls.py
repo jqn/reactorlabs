@@ -1,7 +1,7 @@
 from django.urls import path
-from . import views
+from .views import EmailCaptureView
 
 
 urlpatterns = [
-    path('captures/', views.index),
+    path('newsletter/signup', EmailCaptureView.as_view(), name="captures"),
 ]
