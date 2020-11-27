@@ -1,9 +1,8 @@
-import React, { Component } from "react";
+import React from "react";
 
-import "./Styles.css";
+import "./styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import EmailCaptureForm from "./Components/EmailCaptureForm";
-import NavBar from "./Components/NavBar";
 
 const App = () => {
   return (
