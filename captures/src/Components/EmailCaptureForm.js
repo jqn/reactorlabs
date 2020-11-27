@@ -11,7 +11,7 @@ const EmailCaptureForm = () => {
     <main className="form-email">
       <Form>
         <h2 className="h2 text-left mb-5">
-          Would you like to get notified when I publish new content?
+          Would you like to get notified when we publish new content?
         </h2>
         <h4 className="h4 text-left mb-3">Get the latest sent to your inbox</h4>
         <InputGroup className="mb-3">

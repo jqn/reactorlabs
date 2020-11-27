@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development --config ./webpack.config.js",
-    "build": "webpack --mode production ./src/index.js --output-path ../static/js",
-    "watch": "webpack serve --config ./webpack.config.js --mode development",
+    "watch": "webpack serve --config webpack.local.js",
+    "dev": "webpack --config ./webpack.dev.js ./src/index.js --output-path ../static/js/captures",
+    "build": "webpack --config ./webpack.prod.js ./src/index.js --output-path ../static/js/captures",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -27,7 +27,8 @@
     "style-loader": "^2.0.0",
     "webpack": "^5.6.0",
     "webpack-cli": "^4.2.0",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^5.4.0"
   },
   "dependencies": {
     "bootstrap": "^4.5.3",
