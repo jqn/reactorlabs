@@ -27,3 +27,8 @@ body {
   padding: 10px;
   font-size: 16px;
 }
+
+.form-control:focus {
+  border-color: #fed136;
+  box-shadow: none;
+}

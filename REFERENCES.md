@@ -4,6 +4,10 @@
 
 - [Ipsum generator list](https://www.shopify.com/partners/blog/79940998-15-funny-lorem-ipsum-generators-to-shake-up-your-design-mockups)
 
+**Docs**
+
+- [webpack](https://webpack.js.org/guides/production/)
+
 **Templates**
 
 https://getbootstrap.com/docs/4.0/examples/blog/
