@@ -1,9 +1,29 @@
 from django.forms import ModelForm
 from django.forms import TextInput, Textarea
 from .models import Contact
+from django.core.mail import send_mail
 
 
 class ContactForm(ModelForm):
+    def send_email(self):
+        pass
+        # # send email using the self.cleaned_data dictionary
+        # subject = f"New email from {self.cleaned_data['name']}"
+        # message = f"Contact Name: {self.cleaned_data['name']}\n" \
+        #     f"Contact Phone Number: {self.cleaned_data['phone']}\n" \
+        #     f"Contact Email: {self.cleaned_data['email']}\n\n" \
+        #     f"{self.cleaned_data['message']}"
+        # sender = 'noreply@reactorlabs.studio'
+        # recipient_list = ['jqngl@icloud.com']
+
+        # send_mail(
+        #     subject,
+        #     message,
+        #     sender,
+        #     recipient_list,
+        #     fail_silently=False,
+        # )
+
     class Meta:
         model = Contact
         fields = ["name", "email", "phone", "message"]

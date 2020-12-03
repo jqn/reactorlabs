@@ -139,6 +139,13 @@ AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_KEY')
 AWS_STORAGE_BUCKET_NAME = os.getenv('AWS_BUCKET')
 AWS_S3_REGION_NAME = os.getenv('AWS_REGION')
 
+# SendGrid
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_USE_TLS = True
+
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 

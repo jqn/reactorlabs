@@ -44,6 +44,7 @@
         );
 
         $(uniqueForms).bind("submit", function (e) {
+          console.log("submit");
           var $form = $(this);
           var warningsFound = 0;
           var $inputs = $form

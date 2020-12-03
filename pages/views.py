@@ -4,7 +4,6 @@ from .models import Contact
 from django.urls import reverse_lazy
 from django.http import HttpResponse
 from .forms import ContactForm
-
 # Create your views here.
 
 
@@ -13,6 +12,11 @@ class HomePageView(CreateView):
     model = Contact
     form_class = ContactForm
     success_url = reverse_lazy("thanks")
+
+    def form_valid(self, form):
+        print(form)
+        form.send_email()
+        return super().form_valid(form)
 
 
 def thanks(request):
