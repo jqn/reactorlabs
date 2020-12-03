@@ -14,7 +14,6 @@ class HomePageView(CreateView):
     success_url = reverse_lazy("thanks")
 
     def form_valid(self, form):
-        print(form)
         form.send_email()
         return super().form_valid(form)
 
