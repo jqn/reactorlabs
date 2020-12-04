@@ -1,48 +1,235 @@
 <!-- templates/home.html -->
 {% extends 'base.html' %}
 {% block content %}
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  {% include "header.html" %}
-  <main class="px-3">
-    <h1>Reactor Labs</h1>
-    <p class="lead">Full Stack Engineering &bull; Mobile &bull; Consulting</p>
-    <p class="lead">
-      <a class="text-muted" href="https://twitter.com/jQNReactor" target="_blank" rel="noopener" title="Twitter">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
-        </svg>
-      </a>
-      &nbsp;&nbsp;
-      <a class="text-muted" href="mailto:jqn@reactorlabs.us" target="_blank" rel="noopener" title="Email">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-          <polyline points="22,6 12,13 2,6"></polyline>
-        </svg>
-      </a>
-      &nbsp;&nbsp;
-      <a class="text-muted" href="https://github.com/jqn" target="_blank" rel="noopener" title="Github">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-        </svg>
-      </a>
-      &nbsp;&nbsp;
-      <a class="text-muted" href="https://www.linkedin.com/in/joaquinguardado/" target="_blank" rel="noopener" title="Linkedin">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-          <rect x="2" y="9" width="4" height="12"></rect>
-          <circle cx="4" cy="4" r="2"></circle>
-        </svg>
-      </a>
-      &nbsp;&nbsp;
-      <a class="text-muted" href="https://medium.com/@jQN" target="_blank" rel="noopener" title="Medium">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-          <title>Medium icon</title>
-          <path d="M0 0v24h24V0H0zm19.938 5.686L18.651 6.92a.376.376 0 0 0-.143.362v9.067a.376.376 0 0 0 .143.361l1.257 1.234v.271h-6.322v-.27l1.302-1.265c.128-.128.128-.165.128-.36V8.99l-3.62 9.195h-.49L6.69 8.99v6.163a.85.85 0 0 0 .233.707l1.694 2.054v.271H3.815v-.27L5.51 15.86a.82.82 0 0 0 .218-.707V8.027a.624.624 0 0 0-.203-.527L4.019 5.686v-.27h4.674l3.613 7.923 3.176-7.924h4.456v.271z" />
-        </svg>
-      </a>
-      &nbsp;&nbsp;
-    </p>
-  </main>
-  {% include "footer.html" %}
-</div>
+{% include "nav.html" %}
+{% load static %}
+<!-- Masthead-->
+<header class="masthead">
+  <div class="container">
+    <div class="masthead-subheading">Welcome To Our Lab!</div>
+    <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
+    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+  </div>
+</header>
+<!-- Services-->
+<section class="page-section" id="services">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Services</h2>
+      <h3 class="section-subheading text-muted">Our software engineers have been building and shipping apps for over 7 years.</h3>
+    </div>
+    <div class="row text-center">
+      <div class="col-md-4">
+        <span class="fa-stack fa-4x">
+        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+        <i class="fas fa-mobile fa-stack-1x fa-inverse"></i>
+        </span>
+        <h4 class="my-3">Mobile Apps</h4>
+        <p class="text-muted">We use React Native to build cross-platform apps for iOS and Android. Build it once and it works on both platforms.</p>
+      </div>
+      <div class="col-md-4">
+        <span class="fa-stack fa-4x">
+        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+        <i class="fas fa-code fa-stack-1x fa-inverse"></i>
+        </span>
+        <h4 class="my-3">Training</h4>
+        <p class="text-muted">Your one-stop for learning all things React Native, React, Django and Flask.</p>
+      </div>
+      <div class="col-md-4">
+        <span class="fa-stack fa-4x">
+        <i class="fas fa-circle fa-stack-2x text-primary"></i>
+        <i class="fas fa-desktop fa-stack-1x fa-inverse"></i>
+        </span>
+        <h4 class="my-3">Websites + Web Apps</h4>
+        <p class="text-muted">Your world connection to you and your products. We build cutting edge, user friendly sites that bring you more customers.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Portfolio Grid-->
+<section class="page-section bg-light" id="portfolio">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Portfolio</h2>
+      <h3 class="section-subheading text-muted">Some of the projects we've worked on.</h3>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="{% static 'images/portfolio/01-thumbnail.jpg' %}" alt="" />
+          </a>
+          <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">Blog</div>
+            <div class="portfolio-caption-subheading text-muted">Web App</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="{% static 'images/portfolio/01-thumbnail.jpg' %}" alt="" />
+          </a>
+          <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">News App</div>
+            <div class="portfolio-caption-subheading text-muted">Mobile</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4">
+        <div class="portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="{% static 'images/portfolio/01-thumbnail.jpg' %}" alt="" />
+          </a>
+          <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">Trivia App</div>
+            <div class="portfolio-caption-subheading text-muted">Training</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+        <div class="portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="{% static 'images/portfolio/01-thumbnail.jpg' %}" alt="" />
+          </a>
+          <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">Camera App</div>
+            <div class="portfolio-caption-subheading text-muted">Mobile</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
+        <div class="portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="{% static 'images/portfolio/01-thumbnail.jpg' %}" alt="" />
+          </a>
+          <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">ClockWise</div>
+            <div class="portfolio-caption-subheading text-muted">Web App</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-sm-6">
+        <div class="portfolio-item">
+          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+            </div>
+            <img class="img-fluid" src="{% static 'images/portfolio/01-thumbnail.jpg' %}" alt="" />
+          </a>
+          <div class="portfolio-caption">
+            <div class="portfolio-caption-heading">Time Punch</div>
+            <div class="portfolio-caption-subheading text-muted">Web App</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- About-->
+<section class="page-section" id="about">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">About</h2>
+      <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+    </div>
+  </div>
+</section>
+<!-- Team-->
+<section class="page-section bg-light" id="team">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
+      <h3 class="section-subheading text-muted">The people behind the magic at Reactor Labs.</h3>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="team-member">
+          <img class="mx-auto rounded-circle" src="{% static 'images/portrait.jpg' %}" alt="" />
+          <h4>Joaquin Guardado</h4>
+          <p class="text-muted">Full Stack Engineer</p>
+          <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <p class="large text-muted">Ready to get to work? We are your partners and experts in building a professional impactful product.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Contact-->
+<section class="page-section" id="contact">
+  <div class="container">
+    <div class="text-center">
+      <h2 class="section-heading text-uppercase">Contact Us</h2>
+      <h3 class="section-subheading text-muted">Fill out the form and we'll be in touch shortly.</h3>
+    </div>
+    <form id="contactForm" name="sentMessage" novalidate="novalidate" method="POST" action="{% url "home" %}">
+      {% csrf_token %}
+      <div class="row align-items-stretch mb-5">
+        <div class="col-md-6">
+          <div class="form-group">
+            {{ form.name }}
+            <p class="help-block text-danger"></p>
+          </div>
+          <div class="form-group">
+            {{ form.email }}
+            <p class="help-block text-danger"></p>
+          </div>
+          <div class="form-group mb-md-0">
+            {{ form.phone }}
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group form-group-textarea mb-md-0">
+            {{ form.message }}
+            <p class="help-block text-danger"></p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center">
+        <div id="success"></div>
+        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
+<!-- Footer-->
+<footer class="footer py-4">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-4 text-lg-left">Copyright © ReactorLabs <script>document.write(new Date().getFullYear())</script></div>
+      <div class="col-lg-4 my-3 my-lg-0">
+        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+      </div>
+      <div class="col-lg-4 text-lg-right">
+        <a class="mr-3" href="#!">Privacy Policy</a>
+        <a href="#!">Terms of Use</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 {% endblock content %}

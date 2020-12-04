@@ -63,3 +63,7 @@ nosetests.xml
 coverage.xml 
 *.cover 
 .hypothesis/ 
+
+
+# React
+captures/node_modules
