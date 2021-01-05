@@ -1,235 +1,136 @@
 <!-- templates/home.html -->
 {% extends 'base.html' %}
 {% block content %}
-{% include "nav.html" %}
 {% load static %}
+{% include "nav.html" %}
 <!-- Masthead-->
 <header class="masthead">
-  <div class="container">
-    <div class="masthead-subheading">Welcome To Our Lab!</div>
-    <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Tell Me More</a>
+  <div class="container d-flex h-100 align-items-center">
+    <div class="mx-auto text-center">
+      <h1 class="mx-auto my-0 text-uppercase">Reactor Labs</h1>
+      <h2 class="text-white-50 mx-auto mt-2 mb-5">Full Stack 	&bull; Mobile &bull; Coaching</h2>
+      <a class="btn btn-primary js-scroll-trigger" href="#about">Learn more</a>
+    </div>
   </div>
 </header>
-<!-- Services-->
-<section class="page-section" id="services">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">Services</h2>
-      <h3 class="section-subheading text-muted">Our software engineers have been building and shipping apps for over 7 years.</h3>
-    </div>
-    <div class="row text-center">
-      <div class="col-md-4">
-        <span class="fa-stack fa-4x">
-        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-        <i class="fas fa-mobile fa-stack-1x fa-inverse"></i>
-        </span>
-        <h4 class="my-3">Mobile Apps</h4>
-        <p class="text-muted">We use React Native to build cross-platform apps for iOS and Android. Build it once and it works on both platforms.</p>
-      </div>
-      <div class="col-md-4">
-        <span class="fa-stack fa-4x">
-        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-        <i class="fas fa-code fa-stack-1x fa-inverse"></i>
-        </span>
-        <h4 class="my-3">Training</h4>
-        <p class="text-muted">Your one-stop for learning all things React Native, React, Django and Flask.</p>
-      </div>
-      <div class="col-md-4">
-        <span class="fa-stack fa-4x">
-        <i class="fas fa-circle fa-stack-2x text-primary"></i>
-        <i class="fas fa-desktop fa-stack-1x fa-inverse"></i>
-        </span>
-        <h4 class="my-3">Websites + Web Apps</h4>
-        <p class="text-muted">Your world connection to you and your products. We build cutting edge, user friendly sites that bring you more customers.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- Portfolio Grid-->
-<section class="page-section bg-light" id="portfolio">
-  <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">Portfolio</h2>
-      <h3 class="section-subheading text-muted">Some of the projects we've worked on.</h3>
-    </div>
-    <div class="row">
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="{% static 'images/portfolio/01-thumbnail.jpg' %}" alt="" />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">Blog</div>
-            <div class="portfolio-caption-subheading text-muted">Web App</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="{% static 'images/portfolio/01-thumbnail.jpg' %}" alt="" />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">News App</div>
-            <div class="portfolio-caption-subheading text-muted">Mobile</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4">
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="{% static 'images/portfolio/01-thumbnail.jpg' %}" alt="" />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">Trivia App</div>
-            <div class="portfolio-caption-subheading text-muted">Training</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="{% static 'images/portfolio/01-thumbnail.jpg' %}" alt="" />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">Camera App</div>
-            <div class="portfolio-caption-subheading text-muted">Mobile</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="{% static 'images/portfolio/01-thumbnail.jpg' %}" alt="" />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">ClockWise</div>
-            <div class="portfolio-caption-subheading text-muted">Web App</div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6">
-        <div class="portfolio-item">
-          <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
-            <div class="portfolio-hover">
-              <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
-            </div>
-            <img class="img-fluid" src="{% static 'images/portfolio/01-thumbnail.jpg' %}" alt="" />
-          </a>
-          <div class="portfolio-caption">
-            <div class="portfolio-caption-heading">Time Punch</div>
-            <div class="portfolio-caption-subheading text-muted">Web App</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <!-- About-->
-<section class="page-section" id="about">
+<section class="about-section text-center" id="about">
   <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">About</h2>
-      <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+    <div class="row">
+      <div class="col-lg-8 mx-auto">
+        <h2 class="text-white mb-4">Focus On Cross-Platform Mobile Development</h2>
+        <p class="text-white-50">
+          Gamechanging and cutting edge mobile apps built with
+          <a href="https://reactnative.dev/">React Native</a>.
+          A cross-platform framework that runs on Android, iOS, Windows and the Web.
+        </p>
+      </div>
     </div>
+    <img class="img-fluid" src="{% static 'images/ipad.png' %}" alt="" />
   </div>
 </section>
-<!-- Team-->
-<section class="page-section bg-light" id="team">
+<!-- Projects-->
+<section class="projects-section bg-light" id="projects">
   <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">Our Amazing Team</h2>
-      <h3 class="section-subheading text-muted">The people behind the magic at Reactor Labs.</h3>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <div class="team-member">
-          <img class="mx-auto rounded-circle" src="{% static 'images/portrait.jpg' %}" alt="" />
-          <h4>Joaquin Guardado</h4>
-          <p class="text-muted">Full Stack Engineer</p>
-          <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-          <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-          <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+    <!-- Featured Project Row-->
+    <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+      <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{% static 'images/mobile-sunny.png' %}" alt="" />
+      </div>
+      <div class="col-xl-4 col-lg-5">
+        <div class="featured-text text-center text-lg-left">
+          <h4>Sunny</h4>
+          <p class="text-black-50 mb-0">An open source and MIT licensed Geolocation Weather app built with React Native. It uses geolocation and openweather API to display your current location's weather.</p>
         </div>
       </div>
     </div>
+      <!-- Project One Row-->
+      <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+        <div class="col-lg-6"><img class="img-fluid" src="{% static 'images/mobile-capture.png' %}" alt="" /></div>
+          <div class="col-lg-6">
+            <div class="bg-black text-center h-100 project">
+              <div class="d-flex h-100">
+                <div class="project-text w-100 my-auto text-center text-lg-left">
+                  <h4 class="text-white">Capture</h4>
+                  <p class="mb-0 text-white-50">React Native example app where you can capture an image and upload it to an AWS S3 bucket.</p>
+                  <hr class="d-none d-lg-block mb-0 ml-0" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Project Two Row-->
+        <div class="row justify-content-center no-gutters">
+          <div class="col-lg-6"><img class="img-fluid" src="{% static 'images/web-clockwise.png'%}" alt="" /></div>
+            <div class="col-lg-6 order-lg-first">
+              <div class="bg-black text-center h-100 project">
+                <div class="d-flex h-100">
+                  <div class="project-text w-100 my-auto text-center text-lg-right">
+                    <h4 class="text-white">ClockWise</h4>
+                    <p class="mb-0 text-white-50">A React web app to keep track of your tasks. It features task timers, a todo list and time spent reporting.</p>
+                    <hr class="d-none d-lg-block mb-0 mr-0" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+</section>
+<!-- Signup-->
+<section class="signup-section" id="signup">
+  <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto text-center">
-        <p class="large text-muted">Ready to get to work? We are your partners and experts in building a professional impactful product.</p>
+      <div class="col-md-10 col-lg-8 mx-auto text-center">
+        <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+        <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
+        <form class="form-inline d-flex">
+          <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email" placeholder="Enter email address..." />
+          <button class="btn btn-primary mx-auto" type="submit">Subscribe</button>
+        </form>
       </div>
     </div>
   </div>
 </section>
 <!-- Contact-->
-<section class="page-section" id="contact">
+<section class="contact-section bg-black">
   <div class="container">
-    <div class="text-center">
-      <h2 class="section-heading text-uppercase">Contact Us</h2>
-      <h3 class="section-subheading text-muted">Fill out the form and we'll be in touch shortly.</h3>
+    <div class="row">
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0">Address</h4>
+            <hr class="my-4" />
+            <div class="small text-black-50">Denver, CO</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-envelope text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0">Email</h4>
+            <hr class="my-4" />
+            <div class="small text-black-50"><a href="#!">jqn@reactorlabs.studio</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-3 mb-md-0">
+        <div class="card py-4 h-100">
+          <div class="card-body text-center">
+            <i class="fas fa-mobile-alt text-primary mb-2"></i>
+            <h4 class="text-uppercase m-0">Phone</h4>
+            <hr class="my-4" />
+            <div class="small text-black-50">+1 (719) 433-5279</div>
+          </div>
+        </div>
+      </div>
     </div>
-    <form id="contactForm" name="sentMessage" novalidate="novalidate" method="POST" action="{% url "home" %}">
-      {% csrf_token %}
-      <div class="row align-items-stretch mb-5">
-        <div class="col-md-6">
-          <div class="form-group">
-            {{ form.name }}
-            <p class="help-block text-danger"></p>
-          </div>
-          <div class="form-group">
-            {{ form.email }}
-            <p class="help-block text-danger"></p>
-          </div>
-          <div class="form-group mb-md-0">
-            {{ form.phone }}
-            <p class="help-block text-danger"></p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group form-group-textarea mb-md-0">
-            {{ form.message }}
-            <p class="help-block text-danger"></p>
-          </div>
-        </div>
-      </div>
-      <div class="text-center">
-        <div id="success"></div>
-        <button class="btn btn-primary btn-xl text-uppercase" id="sendMessageButton" type="submit">Send Message</button>
-      </div>
-    </form>
+    <div class="social d-flex justify-content-center">
+      <a class="mx-2" href="https://twitter.com/learnRNative"><i class="fab fa-twitter"></i></a>
+      <a class="mx-2" href="https://jqn.medium.com/"><i class="fab fa-medium-m"></i></a>
+      <a class="mx-2" href="https://github.com/jqn"><i class="fab fa-github"></i></a>
+    </div>
   </div>
 </section>
-<!-- Footer-->
-<footer class="footer py-4">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-lg-4 text-lg-left">Copyright © ReactorLabs <script>document.write(new Date().getFullYear())</script></div>
-      <div class="col-lg-4 my-3 my-lg-0">
-        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
-        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
-      </div>
-      <div class="col-lg-4 text-lg-right">
-        <a class="mr-3" href="#!">Privacy Policy</a>
-        <a href="#!">Terms of Use</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
+{% include "footer.html" %}
 {% endblock content %}
