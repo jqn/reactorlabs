@@ -47,6 +47,10 @@ https://github.com/rhazdon/hugo-theme-hello-friend-ng
 
 - [Emails with SendGrid](https://www.twilio.com/blog/using-twilio-sendgrid-send-emails-python-django)
 
+- [Django Ajax](https://realpython.com/django-and-ajax-form-submissions/)
+
+- []()
+
 **Repos**
 
 - [djangoforbeginners](https://github.com/wsvincent/djangoforbeginners)

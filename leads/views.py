@@ -6,5 +6,7 @@ from rest_framework import generics
 
 
 class LeadListCreate(generics.ListCreateAPIView):
+    print("hello world")
     queryset = Lead.objects.all()
+    print(queryset)
     serializer_class = LeadSerializer
