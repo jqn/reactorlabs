@@ -49,7 +49,7 @@ https://github.com/rhazdon/hugo-theme-hello-friend-ng
 
 - [Django Ajax](https://realpython.com/django-and-ajax-form-submissions/)
 
-- []()
+- [Django Rest Framework API CodingForEnt](https://www.codingforentrepreneurs.com/courses/rest-api/django-rest-framework-api)
 
 **Repos**
 
