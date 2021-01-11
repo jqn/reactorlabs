@@ -7,13 +7,13 @@ For more information on this file, see
 https://docs.djangoproject.com/en/3.0/howto/deployment/wsgi/
 """
 
+from django.core.wsgi import get_wsgi_application
 import os
 
-from django.core.wsgi import get_wsgi_application
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'reactor.settings')
 
 _application = get_wsgi_application()
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'reactor.settings')
 
 env_variables_to_pass = ['SECRET_KEY', 'DB_NAME',
                          'DB_USERNAME', 'DB_PASSWORD',
