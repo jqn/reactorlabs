@@ -83,6 +83,7 @@
         <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
         <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
         <form class="leads-form form-inline d-flex">
+          {% csrf_token %}
           <input class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" type="email" placeholder="Enter email address..." required />
           <button class="btn btn-primary mx-auto" type="submit">Subscribe</button>
           <div class="error-alert alert alert-danger mt-3 invisible" role="alert">

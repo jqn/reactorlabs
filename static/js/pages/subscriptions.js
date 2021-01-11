@@ -4,8 +4,27 @@ $(document).ready(function () {
   var errorAlert = $(".error-alert");
   var successAlert = $(".success-alert");
   var subscribe = (function () {
+    function getCookie(name) {
+      let cookieValue = null;
+      if (document.cookie && document.cookie !== "") {
+        const cookies = document.cookie.split(";");
+        for (let i = 0; i < cookies.length; i++) {
+          const cookie = cookies[i].trim();
+          // Does this cookie string begin with the name we want?
+          if (cookie.substring(0, name.length + 1) === name + "=") {
+            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+            break;
+          }
+        }
+      }
+      return cookieValue;
+    }
+
     var submitLead = function () {
+      const csrftoken = getCookie("csrftoken");
+      console.log("token", csrftoken);
       $.ajax({
+        headers: { "X-CSRFToken": csrftoken },
         type: "POST",
         url: "/api/leads/",
         data: {
