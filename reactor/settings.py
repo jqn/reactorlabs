@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'leads.apps.LeadsConfig',
     'captures.apps.CapturesConfig',
+    'analytical',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
@@ -148,6 +149,9 @@ EMAIL_USE_TLS = True
 
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+# Analytics
+GOOGLE_ANALYTICS_GTAG_PROPERTY_ID = os.getenv('MEASUREMENT_ID')
 
 
 # Static files (CSS, JavaScript, Images)

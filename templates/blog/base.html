@@ -1,8 +1,10 @@
 <!-- templates/blog/base.html -->
-<html lang="en">
+{% load google_analytics_gtag %}
 {% load static %}
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  {% google_analytics_gtag %}
   <!-- Required meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
