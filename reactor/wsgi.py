@@ -24,7 +24,8 @@ env_variables_to_pass = ['SECRET_KEY', 'DB_NAME',
                          'DB_HOSTNAME', 'DB_PORT',
                          'ENVIRONMENT', 'AWS_KEY_ID',
                          'AWS_SECRET_KEY', 'AWS_BUCKET',
-                         'AWS_REGION', 'SENDGRID_API_KEY']
+                         'AWS_REGION', 'SENDGRID_API_KEY',
+                         'MEASUREMENT_ID']
 
 
 def application(environ, start_response):
