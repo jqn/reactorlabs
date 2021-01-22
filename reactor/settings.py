@@ -156,7 +156,6 @@ DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 # Analytics
 GOOGLE_ANALYTICS_GTAG_PROPERTY_ID = os.getenv('MEASUREMENT_ID', 'G-XXXXXXXXXX')
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
