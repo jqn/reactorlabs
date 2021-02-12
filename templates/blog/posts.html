@@ -74,7 +74,7 @@
             {% for post in posts %}
             <div class="blog-post">
               <h2 class="blog-post-title">
-              <p>{{ post.get_absolute_url }}</p>
+              <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
             </h2>
               <p class="blog-post-subtitle">{{ post.subtitle|truncatechars_html:200 }}</p>
               <p class="blog-posts-meta">{{post.last_modified|date:"F d, Y"}} by <a href="#">{{post.author}}</a></p>
@@ -87,7 +87,6 @@
             {% endfor %}
             <!-- /.blog-post -->
 
-          {% comment %} {% include "blog/pagination.html" with page=page_obj  %} {% endcomment %}
           </div>
           <!-- /.blog-main -->
 
