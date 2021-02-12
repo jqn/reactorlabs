@@ -40,11 +40,6 @@ class BlogListView(ListView):
     # Takes care of error
     # Pagination may yield inconsistent results with an unordered object_list
     ordering = ['-created_on']
-    # queryset = Post.objects.all()
-
-    # def get_queryset(self):
-    #     return Post.objects.filter(
-    #         featured=True, draft=False).order_by('-created_on')
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)

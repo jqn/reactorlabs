@@ -20,7 +20,7 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     subtitle = models.CharField(max_length=200, blank=True)
     slug = models.SlugField(
-        max_length=250, unique_for_date='publish')
+        max_length=250, unique_for_date='publish', blank=False)
     cover = models.ImageField(upload_to='covers/', blank=True)
     body = models.TextField()
     author = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
@@ -37,9 +37,9 @@ class Post(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('post_detail', args=[self.publish.year,
-                                            self.publish.month,
-                                            self.publish.day, self.slug])
+        return reverse('post_detail', args=[str(self.publish.year),
+                                            str(self.publish.month),
+                                            str(self.publish.day), self.slug])
 
     def get_markdown(self):
         body = self.body
