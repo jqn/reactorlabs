@@ -62,3 +62,5 @@ https://github.com/rhazdon/hugo-theme-hello-friend-ng
 - [Coding For Entrepreneurs](https://github.com/codingforentrepreneurs)
 
 - [Marked](https://github.com/markedjs/marked/blob/master/docs/demo/quickref.md)
+
+https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html

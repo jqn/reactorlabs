@@ -1,18 +1,15 @@
 <!-- templates/registration/login.html -->
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
-
 {% block content %}
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  {% include "header.html" %}
+<div class="form-container text-left">
+  <div class="px-3 form-signin">
   <h1>Log In</h1>
-  <div class="px-3 text-left">
     <form method="post">
       {% csrf_token %}
       {{ form | crispy }}
       <button class="btn btn-success" type="submit">Log In</button>
     </form>
   </div>
-  {% include "footer.html" %}
 </div>
 {% endblock content %}

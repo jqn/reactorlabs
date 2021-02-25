@@ -24,6 +24,8 @@ urlpatterns = [
     path('users/', include('django.contrib.auth.urls')),
     path('blog/', include('blog.urls')),
     path('dashboard/', include('dashboard.urls')),
+    # path('accounts/', include('django.contrib.auth.urls')),
+    # path('accounts/', include('accounts.urls')),
     path('', include('django_prometheus.urls')),
     path('', include('leads.urls')),
     path('', include('captures.urls')),

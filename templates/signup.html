@@ -1,18 +1,19 @@
 <!-- templates/home.html -->
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
-
 {% block content %}
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-  {% include "header.html" %}
-  <h1>Sign up</h1>
-  <div class="px-3 text-left">
-    <form method="post">
-      {% csrf_token %}
-      {{ form | crispy }}
-      <button class="btn btn-success" type="submit">Sign Up</button>
-    </form>
+<div class="form-container text-left">
+  {% comment %} {% include "header.html" %} {% endcomment %}
+  <div class="px-3 form-signup">
+    <h1>Sign up</h1>
+    <div class="px-3 text-left">
+      <form method="post">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <button class="btn btn-success" type="submit">Sign Up</button>
+      </form>
+    </div>
   </div>
-  {% include "footer.html" %}
+  {% comment %} {% include "footer.html" %} {% endcomment %}
 </div>
 {% endblock content %}
