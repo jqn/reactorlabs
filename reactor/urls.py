@@ -19,15 +19,14 @@ from django.contrib import admin
 from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('users/', include('users.urls')),
-    path('users/', include('django.contrib.auth.urls')),
-    path('blog/', include('blog.urls')),
-    path('dashboard/', include('dashboard.urls')),
-    # path('accounts/', include('django.contrib.auth.urls')),
-    # path('accounts/', include('accounts.urls')),
-    path('', include('django_prometheus.urls')),
     path('', include('leads.urls')),
     path('', include('captures.urls')),
     path('', include('pages.urls')),
+    path('shop/', include('shop.urls', namespace='shop')),
+    path('blog/', include('blog.urls')),
+    path('dashboard/', include('dashboard.urls')),
+    path('users/', include('users.urls')),
+    path('users/', include('django.contrib.auth.urls')),
+    path('', include('django_prometheus.urls')),
+    path('admin/', admin.site.urls),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
