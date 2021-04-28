@@ -9,7 +9,7 @@ from .models import CustomUser
 
 class CustomUserCreationForm(UserCreationForm):
 
-    editor = forms.BooleanField(required=False)
+    # editor = forms.BooleanField(required=False)
     password1 = forms.CharField(label='Password',
                                 widget=forms.PasswordInput)
     password2 = forms.CharField(label='Password Confirmation',
@@ -18,6 +18,7 @@ class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = CustomUser
         fields = ('username', 'email', 'editor', 'password1', 'password2',)
+        exclude = ['editor', ]
         help_texts = {
             'username': None,
         }
@@ -28,3 +29,4 @@ class CustomUserChangeForm(UserChangeForm):
     class Meta:
         model = CustomUser
         fields = ('username', 'email', 'editor',)
+        # exclude = ['editor', ]
