@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'captures.apps.CapturesConfig',
     'analytical',
     'django_prometheus',
+    'shop.apps.ShopConfig',
 ]
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
