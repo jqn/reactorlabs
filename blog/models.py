@@ -1,5 +1,4 @@
 # articles/models.py
-from django.conf import settings
 from django.contrib.auth import get_user_model
 from django.db import models
 from django.urls import reverse
@@ -12,11 +11,22 @@ from django.utils import timezone
 class Category(models.Model):
     name = models.CharField(max_length=20)
 
+    slug = models.SlugField(max_length=200,
+                            unique=True)
+
+    class Meta:
+        ordering = ('name',)
+        verbose_name = 'category'
+        verbose_name_plural = 'categories'
+
     def __str__(self):
         return self.name
 
 
 class Post(models.Model):
+    category = models.ForeignKey(Category,
+                                 related_name='posts',
+                                 on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     subtitle = models.CharField(max_length=200, blank=True)
     slug = models.SlugField(
@@ -31,7 +41,10 @@ class Post(models.Model):
     publish = models.DateTimeField(default=timezone.now)
     created_on = models.DateTimeField(auto_now_add=True)
     last_modified = models.DateTimeField(auto_now=True)
-    categories = models.ManyToManyField('Category', related_name='posts')
+
+    class Meta:
+        ordering = ('title',)
+        index_together = (('id', 'slug'),)
 
     def __str__(self):
         return self.title
