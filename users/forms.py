@@ -9,7 +9,6 @@ from .models import CustomUser
 
 class CustomUserCreationForm(UserCreationForm):
 
-    # editor = forms.BooleanField(required=False)
     password1 = forms.CharField(label='Password',
                                 widget=forms.PasswordInput)
     password2 = forms.CharField(label='Password Confirmation',
@@ -22,6 +21,14 @@ class CustomUserCreationForm(UserCreationForm):
         help_texts = {
             'username': None,
         }
+    
+    def clean_email(self, *args, **kwargs):
+        email = self.cleaned_data.get('email')
+        if not email.endswith('@reactorlabs.studio'):
+            raise forms.ValidationError("Please enter a valid email")
+        if CustomUser.objects.filter(email=email).exists():
+            raise forms.ValidationError("This email alrealy exists.")
+        return email
 
 
 class CustomUserChangeForm(UserChangeForm):
@@ -29,4 +36,3 @@ class CustomUserChangeForm(UserChangeForm):
     class Meta:
         model = CustomUser
         fields = ('username', 'email', 'editor',)
-        # exclude = ['editor', ]
