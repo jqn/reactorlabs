@@ -1,8 +1,8 @@
 <!-- templates/home.html -->
-{% extends 'base.html' %}
+{% extends 'pages/base.html' %}
 {% block content %}
 {% load static %}
-{% include "nav.html" %}
+{% include "pages/nav.html" %}
 <!-- Masthead-->
 <header class="masthead">
   <div class="container d-flex h-100 align-items-center">
@@ -140,7 +140,7 @@
     </div>
   </div>
 </section>
-{% include "footer.html" %}
+{% include "pages/footer.html" %}
 {% endblock content %}
 {% block scripts %}
   <script src="{% static 'js/pages/subscriptions.js' %}"></script>

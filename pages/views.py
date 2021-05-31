@@ -10,7 +10,7 @@ import datetime
 
 
 class HomePageView(CreateView):
-    template_name = 'home.html'
+    template_name = 'pages/home.html'
     model = Contact
     form_class = ContactForm
     success_url = reverse_lazy("thanks")

@@ -20,6 +20,10 @@ class BlogCreateView(LoginRequiredMixin, CreateView):
     form_class = PostCreateForm
     template_name = 'blog/post_new.html'
 
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
+
 
 class BlogUpdateView(LoginRequiredMixin, UpdateView):
     model = Post
