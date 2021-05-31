@@ -1,9 +1,13 @@
 <!-- templates/registration/login.html -->
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
+{% block head_extra %}
+<link href="{% static 'css/users.css' %}" rel="stylesheet" />
+{% endblock head_extra %}
 {% block content %}
 <div class="form-container text-left">
-  <div class="px-3 form-signin">
+  <div class="px-3 form-user">
   <h1>Log In</h1>
     <form method="post">
       {% csrf_token %}

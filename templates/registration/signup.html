@@ -1,10 +1,14 @@
 <!-- templates/home.html -->
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
+{% load static %}
+{% block head_extra %}
+<link href="{% static 'css/users.css' %}" rel="stylesheet" />
+{% endblock head_extra %}
 {% block content %}
 <div class="form-container text-left">
   {% comment %} {% include "header.html" %} {% endcomment %}
-  <div class="px-3 form-signup">
+  <div class="px-3 form-user">
     <h1>Sign up</h1>
     <div class="px-3 text-left">
       <form method="post">

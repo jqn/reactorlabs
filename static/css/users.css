@@ -1,0 +1,20 @@
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-container {
+  padding-top: 40px;
+}
+
+.form-user {
+  width: 100%;
+  max-width: 600px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-user .btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
