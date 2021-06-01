@@ -5,5 +5,5 @@ from django.db import models
 
 
 class CustomUser(AbstractUser):
-    editor = models.PositiveIntegerField(null=True, blank=True)
+    editor = models.BooleanField(default=False)
     is_active = models.BooleanField(default=False)
