@@ -6,4 +6,4 @@ from django.db import models
 
 class CustomUser(AbstractUser):
     editor = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=False)
+    is_active = models.BooleanField(default=True)
