@@ -10,22 +10,24 @@ const EmailCaptureForm = () => {
   return (
     <main className="form-email">
       <Form>
-        <h2 className="h2 text-left mb-5">
+        <h2 className="text-left mb-4 display-6 fw-normal">
           Would you like to get notified when we publish new content?
         </h2>
-        <h4 className="h4 text-left mb-3">Get the latest sent to your inbox</h4>
-        <InputGroup className="mb-3">
-          <FormControl
-            size="lg"
-            placeholder="Enter email"
-            aria-label="Enter email"
-          />
-          <InputGroup.Append>
-            <Button size="lg" variant="outline-secondary">
-              Submit
-            </Button>
-          </InputGroup.Append>
-        </InputGroup>
+        <p className="h4 text-left mb-4 fw-normal">Get the latest sent to your inbox</p>
+        <div className="col-lg-12 mx-auto px-0">
+          <InputGroup className="mb-3">
+            <FormControl
+              size="lg"
+              placeholder="Enter email"
+              aria-label="Enter email"
+            />
+            <InputGroup.Append>
+              <Button size="lg" variant="outline-secondary">
+                Submit
+              </Button>
+            </InputGroup.Append>
+          </InputGroup>
+        </div>
       </Form>
     </main>
   );
