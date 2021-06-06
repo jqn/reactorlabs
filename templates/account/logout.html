@@ -10,12 +10,12 @@
   {% include "account/nav.html" %}
   <div class="px-4 py-5 my-5">
     <div class="col-lg-12 mx-auto">
-      <h1 class="display-6">Log Out</h1>
-      <p>Are you sure you want to log out?</p>
+      <h1 class="display-6">Sign Out</h1>
+      <p>Are you sure you want to sign out?</p>
       <form method="post" action="{% url 'account_logout' %}">
       {% csrf_token %}
       {{ form|crispy }}
-      <button class="btn btn-danger" type="submit">Log Out</button>
+      <button class="btn btn-danger" type="submit">Sign Out</button>
       </form> 
     </div>
   </div>
