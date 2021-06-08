@@ -51,6 +51,8 @@ https://github.com/rhazdon/hugo-theme-hello-friend-ng
 
 - [Django Rest Framework API CodingForEnt](https://www.codingforentrepreneurs.com/courses/rest-api/django-rest-framework-api)
 
+- [Extend user model](https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html)
+
 **Repos**
 
 - [djangoforbeginners](https://github.com/wsvincent/djangoforbeginners)
@@ -62,8 +64,6 @@ https://github.com/rhazdon/hugo-theme-hello-friend-ng
 - [Coding For Entrepreneurs](https://github.com/codingforentrepreneurs)
 
 - [Marked](https://github.com/markedjs/marked/blob/master/docs/demo/quickref.md)
-
-https://simpleisbetterthancomplex.com/tutorial/2016/07/22/how-to-extend-django-user-model.html
 
 - [Email templates](https://github.com/pennersr/django-allauth/blob/master/allauth/templates/account/email/email_confirmation_message.txt)
 
