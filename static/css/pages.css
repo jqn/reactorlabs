@@ -11490,7 +11490,6 @@ ul {
 }
 
 li {
-  border-bottom: 1px dashed #e0e0e0;
   line-height: 1.55;
   list-style-type: none;
   padding: 7px 0;
@@ -11508,7 +11507,6 @@ kbd {
 }
 
 .container {
-  background: #fff;
   margin: 0 auto;
   width: 100%;
   max-width: 1170px;

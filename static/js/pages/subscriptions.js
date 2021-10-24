@@ -22,7 +22,6 @@ $(document).ready(function () {
 
     var submitLead = function () {
       const csrftoken = getCookie("csrftoken");
-      console.log("token", csrftoken);
       $.ajax({
         headers: { "X-CSRFToken": csrftoken },
         type: "POST",
@@ -44,7 +43,6 @@ $(document).ready(function () {
         timeout: 5000,
         // handle a non-successful response
         error: function (xhr, message, err) {
-          console.log("xhr", xhr);
           // add the error to the dom
           errorAlert.removeClass("invisible");
           setTimeout(function () {
