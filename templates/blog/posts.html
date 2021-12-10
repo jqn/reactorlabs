@@ -30,7 +30,7 @@
             <h3 class="mb-0">{{feature.title}}</h3>
             <div class="mb-0 text-muted">{{feature.last_modified|date:"M d"}}</div>
             {% autoescape on %}
-            <p class="card-text mb-0">{{feature.get_markdown|truncatechars_html:100}}</p>
+            <p class="card-text mb-0">{{feature.get_markdown|truncatechars_html:20}}</p>
             {% endautoescape %}
             <a href="{{ feature.get_absolute_url }}" class="stretched-link">Continue reading</a>
           </div>
