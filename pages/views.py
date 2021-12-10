@@ -28,6 +28,10 @@ class HomePageView(CreateView):
         return context
 
 
+class VimCheatSheet(TemplateView):
+    template_name = 'pages/vimcheatsheet.html'
+
+
 def thanks(request):
     return HttpResponse("Thank you! Will get in touch soon.")
 

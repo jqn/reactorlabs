@@ -1,34 +1,12 @@
 
-<!DOCTYPE html>
-<html lang="en">
+<!-- templates/home.html -->
+{% extends 'pages/base.html' %}
+{% block content %}
+{% load static %}
+{% include "pages/nav.html" %}
 
-<head>
-  <meta charSet="utf-8" />
-  <meta http-equiv="x-ua-compatible" content="ie=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <title>Vim Cheat Sheet</title>
-  <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
-  <link rel="manifest" href="/manifest.webmanifest" />
-  <meta name="theme-color" content="#FA4949" />
-  <meta http-equiv="cache-control" content="max-age=600" />
-  <link rel="apple-touch-icon" sizes="48x48" href="/images/icons/icon-48x48.png" />
-  <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/icon-72x72.png" />
-  <link rel="apple-touch-icon" sizes="96x96" href="/images/icons/icon-96x96.png" />
-  <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/icon-144x144.png" />
-  <link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon-192x192.png" />
-  <link rel="apple-touch-icon" sizes="256x256" href="/images/icons/icon-256x256.png" />
-  <link rel="apple-touch-icon" sizes="384x384" href="/images/icons/icon-384x384.png" />
-  <link rel="apple-touch-icon" sizes="512x512" href="/images/icons/icon-512x512.png" />
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-</head>
-
-<body>
-  <div class="sponsor">	
-    <div class="container">	
-       <p><a target="_blank" href="https://github.com/sponsors/rtorr"> Please consider sponsoring this project</a>!	
-    </div>	
-  </div>
-  <div class="container">
+<section id="sheetcheat">
+  <div class="container p-5">
     <div class="grid-block">
       <div class="grid-1">
         <h1>
@@ -832,133 +810,7 @@
             <div class="box-body">
               <div class="grid-block">
                 <div class="grid-lg-1-2">
-                  <h3 id="languages">Languages</h3>
-                  <ul>
-                    <li>
-                      <a href="/lang/ar">العربية</a>
-                    </li>
-                    <li>
-                      <a href="/lang/ca">Català</a>
-                    </li>
-                    <li>
-                      <a href="/lang/de_de">Deutsch</a>
-                    </li>
-                    <li>
-                      <a href="/lang/en_us">English</a>
-                    </li>
-                    <li>
-                      <a href="/lang/es_es">Español</a>
-                    </li>
-                    <li>
-                      <a href="/lang/fa_ir">Persian</a>
-                    </li>
-                    <li>
-                      <a href="/lang/fr_fr">Français</a>
-                    </li>
-                    <li>
-                      <a href="/lang/he">עברית</a>
-                    </li>
-                    <li>
-                      <a href="/lang/id">Bahasa Indonesia</a>
-                    </li>
-                    <li>
-                      <a href="/lang/it">Italiano</a>
-                    </li>
-                    <li>
-                      <a href="/lang/ja">日本語</a>
-                    </li>
-                    <li>
-                      <a href="/lang/ko">한국어</a>
-                    </li>
-                    <li>
-                      <a href="/lang/mm">မြန်မာ</a>
-                    </li>
-                    <li>
-                      <a href="/lang/nl_nl">Nederlands</a>
-                    </li>
-                    <li>
-                      <a href="/lang/pl_pl">Polski</a>
-                    </li>
-                    <li>
-                      <a href="/lang/pt_br">Português - Brasil</a>
-                    </li>
-                    <li>
-                      <a href="/lang/pt_pt">Português - Portugal</a>
-                    </li>
-                    <li>
-                      <a href="/lang/ro">Romana</a>
-                    </li>
-                    <li>
-                      <a href="/lang/ru">Русский</a>
-                    </li>
-                    <li>
-                      <a href="/lang/si_lk">සිංහල</a>
-                    </li>
-                    <li>
-                      <a href="/lang/sk">Slovenčina</a>
-                    </li>
-                    <li>
-                      <a href="/lang/sv">Svenska</a>
-                    </li>
-                    <li>
-                      <a href="/lang/th">ภาษาไทย</a>
-                    </li>
-                    <li>
-                      <a href="/lang/tr">Türkçe</a>
-                    </li>
-                    <li>
-                      <a href="/lang/uk">Українська</a>
-                    </li>
-                    <li>
-                      <a href="/lang/vi_vn">Tiếng Việt</a>
-                    </li>
-                    <li>
-                      <a href="/lang/zh_cn">简体中文</a>
-                    </li>
-                    <li>
-                      <a href="/lang/zh_tw">中文 (台灣)</a>
-                    </li>
-                  </ul>                </div>
-                <div class="grid-lg-1-2">
-                  <h3>About the vim cheat sheet</h3>
-                  <p>
-                    This project aims to be one of the most accessible vim guides available. We
-                    made sure to support mobile, desktop, and other
-                    <a href="#languages">languages</a>.
-                  </p>
-                  <p>
-                    <a target="_blank" href="https://github.com/sponsors/rtorr">❤️ Please consider sponsoring this project ❤️</a>!
-                  </p>
-                  <p>
-                    You can read about how to contribute (and help improve) by viewing our
-                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/README.md" target="_blank"
-                      rel="noopener noreferrer">
-                      README
-                    </a>
-                    . There you can see how to set up this project, or how to contribute a new
-                    language. Here is a big thank you to our
-                    <a href="https://github.com/rtorr/vim-cheat-sheet/graphs/contributors" target="_blank"
-                      rel="noopener noreferrer">
-                      contributors!
-                    </a>
-                  </p>
-                  <p>
-                    This project is licensed under
-                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/License.txt" target="_blank"
-                      rel="noopener noreferrer">
-                      The MIT License (MIT)
-                    </a>
-                    .
-                  </p>
-                  <h3>Other places to find this document</h3>
-                  <p>
-                    This document was embedded in
-                    <a href="https://duckduckgo.com/?q=vim+cheat+sheet" target="_blank" rel="noopener noreferrer">
-                      DuckDuckGo
-                    </a>
-                    .
-                  </p>
-                  <h3>More resources</h3>
+                  <div class="grid-lg-1-2">
                   <p>
                     Interactive Vim tutorial:
                     <a href="https://openvim.com/" target="_blank" rel="noopener noreferrer">
@@ -990,20 +842,11 @@
               Github
             </a>
           </p>
-          <p>version: 3.1.1</p>
         </div>
       </div>
     </div>
   </div>
-  <script>
-    window.CACHE_NAME = "3.1.1";
+</section>
 
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('/javascripts/sw.js?version=3.1.1');
-      });
-    }
-  </script>
-</body>
-
-</html>
+{% include "pages/footer.html" %}
+{% endblock content %}

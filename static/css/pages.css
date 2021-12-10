@@ -11380,12 +11380,10 @@ body {
 
 
 /* **** Vim Cheat Sheet **** */
-/*Layout*/
-
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+#sheetcheat.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1170px;
 }
 
 .grid-block {
@@ -11415,13 +11413,4 @@ body {
   zoom: 1;
 }
 
-/*Large*/
-@media screen and (min-width: 64em) {
-  .grid-lg-1-2 {
-    width: 50%;
-  }
-  .grid-lg-1-3 {
-    width: 33.3333%;
-  }
-}
 
